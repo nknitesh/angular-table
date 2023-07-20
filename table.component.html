@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Student Marksheet</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Roll No.</th>
+          <th>Name</th>
+          <th>English</th>
+          <th>Maths</th>
+          <th>Science</th>
+          <th>Computer Science</th>
+          <th>Social Studies</th>
+        <tr>  
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students; let one=odd; let two=even;" [ngClass]="{odd:one, even:two}">
+          <td>{{student.rollNo}}</td>
+          <td>{{student.Name}}</td>
+          <td>{{student.Eng}}</td>
+          <td>{{student.Math}}</td>
+          <td>{{student.Sci}}</td>
+          <td>{{student.Cs}}</td>
+          <td>{{student.Ss}}</td>
+    
+        </tr>
+      </tbody>
+    </table>
+  </div>
